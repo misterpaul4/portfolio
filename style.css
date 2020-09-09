@@ -10,6 +10,13 @@ li {
 	list-style: none;
 }
 
+.centered-container,
+.centered {
+  display: grid;
+  place-items: center;
+}
+
+
 .languages ul {
 	justify-content: space-evenly;
 }
