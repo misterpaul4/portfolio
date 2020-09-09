@@ -1,3 +1,15 @@
 .hero {
 	height: 100vh;
 }
+
+.tech-icons {
+	font-size: 7em;
+}
+
+.projects li {
+	list-style: none;
+}
+
+.projects ul {
+	justify-content: space-evenly;
+}
