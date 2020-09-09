@@ -6,10 +6,30 @@
 	font-size: 7em;
 }
 
-.projects li {
+li {
 	list-style: none;
 }
 
-.projects ul {
+.languages ul {
 	justify-content: space-evenly;
+}
+
+article {
+	flex-basis: 50%;
+}
+
+.pj-1:hover {
+	background: #3778c2 !important;
+}
+
+.pj-2:hover {
+	background: #d35649 !important;
+}
+
+.pj-3:hover {
+	background: #f72210 !important;
+}
+
+.pj-4:hover {
+	background: #f5c518 !important;
 }
