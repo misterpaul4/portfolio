@@ -1,13 +1,6 @@
-/* nav */
-nav {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.logo {
-	width: 120px;
-	height: 50px;
+/* global */
+:root {
+  --primary-color: #38b6ff;
 }
 
 /* general */
@@ -17,4 +10,54 @@ a {
 
 a:hover {
 	text-decoration: none;
+}
+
+.flex-centered {
+	justify-content: center;
+}
+
+.flex-centered,
+.flex-vertical {
+	display: flex;
+	align-items: center;
+}
+
+/* nav */
+nav {
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	border: 1px solid green;
+}
+
+.logo {
+	width: 120px;
+	height: 50px;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
+.email-btn {
+	display: inline-block;
+	border: 0;
+	background-color: black;
+	color: white;
+}
+
+/* hero */
+.hero {
+	border: 1px solid gold;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero .message {
+	width: 700px;
+}
+
+.social-links a {
+	font-size: 2rem;
 }
