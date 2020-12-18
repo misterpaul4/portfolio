@@ -1,6 +1,7 @@
 /* global */
 :root {
-  --primary-color: #38b6ff;
+	--color-blue: #38b6ff;
+	--color-gray: #423b39;
 }
 
 /* general */
@@ -30,6 +31,11 @@ img {
 	justify-content: space-between;
 }
 
+.flex-inverse {
+	flex-direction: column;
+}
+
+.flex-inverse,
 .flex-between,
 .flex-centered,
 .flex-vertical {
@@ -107,4 +113,25 @@ nav {
 
 .oth-3 {
 	background-image: url('./img//oth3.jpg');
+}
+
+.project-details {
+	height: 100%;
+	align-items: flex-start;
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, rgba(67, 67, 67, 0.7), rgba(0, 0, 0, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, rgba(67, 67, 67, 0.7), rgba(0, 0, 0, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.tags > * {
+	background-color: var(--color-gray);
+	font-size: 0.8rem;
+}
+
+.others h4 {
+	font-size: 1.2rem;
+}
+
+.others p {
+	font-size: 0.9rem;
 }
