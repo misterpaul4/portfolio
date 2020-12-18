@@ -12,10 +12,25 @@ a:hover {
 	text-decoration: none;
 }
 
+img {
+	object-fit: cover;
+}
+
+.bg-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .flex-centered {
 	justify-content: center;
 }
 
+.flex-between {
+	justify-content: space-between;
+}
+
+.flex-between,
 .flex-centered,
 .flex-vertical {
 	display: flex;
@@ -27,7 +42,7 @@ nav {
 	align-items: center;
 	position: fixed;
 	width: 100%;
-	border: 1px solid green;
+	background-color: white;
 }
 
 .logo {
@@ -60,4 +75,36 @@ nav {
 
 .social-links a {
 	font-size: 2rem;
+}
+
+/* projects */
+.featured > * {
+	flex: 1;
+	height: 300px;
+}
+
+.ft-1 {
+	background-image: url('./img//ft1.jpg');
+}
+
+.ft-2 {
+	background-image: url('./img//ft2.jpg');
+}
+
+.others > * {
+	flex: 1;
+	height: 200px;
+	background-color: lightcoral;
+}
+
+.oth-1 {
+	background-image: url('./img//oth1.jpg');
+}
+
+.oth-2 {
+	background-image: url('./img//oth2.jpg');
+}
+
+.oth-3 {
+	background-image: url('./img//oth3.jpg');
 }
