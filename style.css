@@ -53,6 +53,7 @@ nav {
 	position: fixed;
 	width: 100%;
 	background-color: white;
+	z-index: 2;
 }
 
 .logo {
@@ -64,8 +65,8 @@ nav {
 	cursor: pointer;
 }
 
-.email-btn {
-	display: inline-block;
+.email-btn,
+.resume-btn {
 	border: 0;
 	background-color: black;
 	color: white;
@@ -129,9 +130,13 @@ nav {
   transition: opacity 0.7s;
 }
 
+.projects .tags > * {
+	font-size: 0.8rem;
+}
+
 .tags > * {
 	background-color: var(--color-gray);
-	font-size: 0.8rem;
+	color: white;
 }
 
 .others h4 {
@@ -140,4 +145,38 @@ nav {
 
 .others p {
 	font-size: 0.9rem;
+}
+
+/* about */
+.talents {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.talents > * {
+	flex: 1;
+	margin: 10px;
+	border-radius: 20px;
+}
+
+.about h4 {
+	margin: 80px 0 30px 0;
+}
+
+.about .icons {
+	background-color: red;
+	display: inline-block;
+	font-size: 2rem;
+}
+
+.about .icons {
+	padding: 10px 20px;
+	border-radius: 100%;
+}
+
+.about .tags > * {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: 5px;
 }
