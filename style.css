@@ -180,3 +180,16 @@ nav {
 	flex-wrap: wrap;
 	margin: 5px;
 }
+
+/* contact */
+form {
+	display: inline-flex;
+}
+
+form > * {
+	display: block;
+}
+
+#submit-btn {
+	align-self: center;
+}
