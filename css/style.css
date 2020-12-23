@@ -9,6 +9,10 @@
 	--color-light: #EBEBFF;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -21,6 +25,7 @@ a {
 a:hover {
 	text-decoration: none;
 	color: var(--color-blue);
+	cursor: pointer;
 }
 
 img {
@@ -72,8 +77,9 @@ nav {
 	height: 50px;
 }
 
-.logo:hover {
-	cursor: pointer;
+.email-btn:hover,
+.resume-btn:hover {
+	color: white;
 }
 
 .email-btn,
@@ -81,6 +87,7 @@ nav {
 	border: 0;
 	background-color: var(--color-blue);
 	color: white;
+	font-weight: bold;
 }
 
 /* hero */
@@ -100,6 +107,7 @@ h5,
 h6 {
 	font-weight: bold;
 	font-family: 'Pacifico', cursive;
+	text-transform: capitalize;
 }
 
 .shape {
@@ -174,6 +182,13 @@ h6 {
 }
 
 /* projects */
+#my-projects:before {
+	content: "";
+	display: block;
+	height: 100px;
+	margin: -100px 0 0;
+}
+
 .featured > * {
 	flex: 1;
 	height: 400px;
@@ -238,6 +253,12 @@ h6 {
 }
 
 /* about */
+#about-me:before {
+	content: "";
+	display: block;
+	margin-bottom: 100px;
+}
+
 .talents {
 	display: flex;
 	justify-content: center;
@@ -250,6 +271,8 @@ h6 {
 	border-radius: 20px;
 	min-width: 250px;
 	max-width: 325px;
+	background-color: var(--color-light);
+	padding: 20px 5px;
 }
 
 .about p {
@@ -261,12 +284,10 @@ h6 {
 }
 
 .about .icons {
-	background-color: red;
+	background-color: var(--color-blue);
+	color: white;
 	display: inline-block;
 	font-size: 2rem;
-}
-
-.about .icons {
 	padding: 10px 20px;
 	border-radius: 100%;
 }
@@ -275,10 +296,11 @@ h6 {
 	display: inline-flex;
 	flex-wrap: wrap;
 	margin: 5px;
+	border-radius: 20px;
 }
 
 /* contact */
-.contact {
+footer {
 	background-color: var(--color-blue);
 }
 
@@ -293,15 +315,22 @@ form {
 
 form > * {
 	display: block;
+	border-radius: 20px;
+	border: 0;
 }
 
 #submit-btn {
 	align-self: center;
 }
 
-.contact textarea {
-	width: 500px;
+.contact .social-links {
+	border-bottom: 1px solid white;
 }
+
+.contact .social-links > * {
+	color: white;
+}
+
 
 @keyframes move {
   0%   { transform: scale(1)   translate(10px, -30px); }
@@ -316,9 +345,5 @@ form > * {
 	nav .email-btn,
 	.nav-links {
 		display: none;
-	}
-
-	.contact textarea {
-		width: 300px;
 	}
  }

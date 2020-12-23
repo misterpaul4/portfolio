@@ -19,19 +19,19 @@
   <nav class="py-2 flex-vertical justify-content-sm-around justify-content-between px-sm-0 px-4">
     <div class="flex-centered">
       <!-- logo -->
-      <img src="./img/logo.png" alt="logo" class="logo">
+      <a href="#"><img src="./img/logo.png" alt="logo" class="logo"></a>
       <!-- links -->
       <div class="nav-links">
-        <a href="#" class="ml-5">Projects</a>
-        <a href="#" class="mx-5">About</a>
-        <a href="#">Contact</a>
+        <a href="#my-projects" class="ml-5">Projects</a>
+        <a href="#about-me" class="mx-5">About</a>
+        <a href="#contact-me">Contact</a>
       </div>
     </div>
-    <button class="email-btn rounded px-3 py-2">Email Me</button>
+    <a href="mailto: ajuzepaul@gmail.com" class="email-btn rounded px-3 py-2">Email Me</a>
 
     <!-- burger menu -->
     <div class="outer-menu d-sm-none d-flex">
-      <input class="checkbox-toggle" type="checkbox" />
+      <input class="checkbox-toggle" type="checkbox" id="menu-checkbox" />
       <div class="hamburger">
         <div id="burger"></div>
       </div>
@@ -39,11 +39,11 @@
       <div class="menu">
         <div>
           <div>
-            <ul>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="mt-5"><a href="#">Email Me</a></li>
+            <ul class="mobile-links">
+              <li><a href="#my-projects">Projects</a></li>
+              <li><a href="#about-me">About</a></li>
+              <li><a href="#contact-me">Contact</a></li>
+              <li class="mt-5"><a href="mailto: ajuzepaul@gmail.com">Email Me</a></li>
             </ul>
           </div>
         </div>
@@ -56,12 +56,12 @@
     <div class="hero">
       <div class="message container">
         <h1 class="mb-4">Hi, I'm Paul <br>Great to have you here</h1>
-        <p>I'm a software developer, one that makes cool & interesting stuff you probably haven't seen yet. If you've got a project in mind & you're in need of a deveoper, well, look no further cuz you found one. Scroll down to see some of my work!</p>
+        <p>I'm a software developer, one that makes cool & interesting stuff that might interest you. If you've got a project in mind & you're in need of a deveoper, well, look no further cuz you found one. Scroll down to see some of my work!</p>
         <div class="social-links">
           <span class="d-block">LET'S CONNECT</span>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#" class="mx-3"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://github.com/misterpaul4"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chukwuebuka-paul-ajuizeogu/" class="mx-3"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/paulajuze"><i class="fab fa-twitter-square"></i></a>
         </div>
 <!--
         <div class="shape sp-4">
@@ -107,7 +107,7 @@
       <!-- shapes end -->
     </div>
 
-    <div class="projects container mb-5">
+    <div class="projects container mb-5" id="my-projects">
       <h2 class="m-3 text-center">Featured Projects</h2>
 
       <div class="featured flex-between flex-wrap text-light">
@@ -125,8 +125,8 @@
             </p>
 
             <div class="links">
-              <a href="#" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Source</a>
+              <a href="https://gentle-beyond-56463.herokuapp.com/welcome" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
+              <a href="https://github.com/misterpaul4/expense-tracker"><i class="fab fa-github"></i> Source</a>
             </div>
           </div>
         </div>
@@ -144,8 +144,8 @@
             </p>
 
             <div class="links">
-              <a href="#" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Source</a>
+              <a href="https://misterpaul4.github.io/Demon-Runner/" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
+              <a href="https://github.com/misterpaul4/Demon-Runner"><i class="fab fa-github"></i> Source</a>
             </div>
           </div>
         </div>
@@ -164,8 +164,8 @@
             <p>A clone of the Newsweek website built using bootstrap.</p>
 
             <div class="links">
-              <a href="#" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Source</a>
+              <a href="https://newsweek-clone-by-paul.netlify.app/" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
+              <a href="https://github.com/misterpaul4/Newsweek-clone"><i class="fab fa-github"></i> Source</a>
             </div>
           </div>
         </div>
@@ -184,8 +184,8 @@
             </p>
 
             <div class="links">
-              <a href="#" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Source</a>
+              <a href="https://misterpaul4.github.io/Weather-GT/" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
+              <a href="https://github.com/misterpaul4/Weather-GT"><i class="fab fa-github"></i> Source</a>
             </div>
           </div>
         </div>
@@ -201,27 +201,21 @@
             <p>An online directory of rental properties</p>
 
             <div class="links">
-              <a href="#" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Source</a>
+              <a href="https://property-rental-by-paul.netlify.app/" class="mr-4"><i class="fas fa-globe"></i> Demo</a>
+              <a href="https://github.com/misterpaul4/property-rental"><i class="fab fa-github"></i> Source</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="about container flex-inverse text-center mb-5">
+    <div class="about container flex-inverse text-center mb-5" id="about-me">
       <!-- about me -->
       <div>
-        <h2>About Myself</h2>
+        <h2>about me</h2>
         <p>I am a free spirited & highly motivated individual who just love spending hours on a computer screen writing code.I am always open to new & interesting opportunities so if you've got any, get in touch with me and let's have coffee, or audio meeting, or video meeting, whatever it is we do in this pandemic lol.
         </p>
-        <div class="social-links">
-          <a href="#"><i class="far fa-envelope"></i></a>
-          <a href="#" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="mr-3"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <button class="resume-btn px-3 py-2 rounded my-3">Get My Resume</button>
+        <a href="https://docs.google.com/document/d/1pnAxKSZu-Av96ifKrp0C-4qQCJZVtGFWLk3sRy6NQZw/edit?usp=sharing" class="resume-btn px-3 py-2 rounded my-3">Get My Resume</a>
         <div class="my-4">
           <ul class="p-0">
             <h5>Publications</h5>
@@ -233,7 +227,7 @@
       <!-- talents -->
       <div class="talents">
         <!-- languages -->
-        <div class="border py-4 flex-between flex-column">
+        <div class="border flex-between flex-column">
           <div class="icons"><i class="fas fa-code-branch"></i></div>
 
           <h4>Languages</h4>
@@ -247,7 +241,7 @@
         <!-- languages end -->
 
         <!-- frameworks -->
-        <div class="border py-4 flex-between flex-column">
+        <div class="border flex-between flex-column">
           <div class="icons"><i class="fas fa-cubes"></i></div>
 
           <h4>Frameworks</h4>
@@ -265,7 +259,7 @@
         <!-- frameworks end -->
 
         <!-- skills -->
-        <div class="border py-4 flex-between flex-column">
+        <div class="border flex-between flex-column">
           <div class="icons"><i class="fab fa-gripfire"></i></div>
 
           <h4>Skills</h4>
@@ -281,15 +275,25 @@
       </div>
     </div>
 
-    <div class="contact py-5 text-center">
-      <form class="flex-column">
-        <h2 class="text-light">Contact Me</h2>
-        <input type="text" placeholder="Name" class="px-2" id="name">
-        <input type="email" placeholder="Email" class="px-2 my-3" id="email" required>
-        <textarea rows="7" placeholder="Hi Paul, i am ..." class="px-3 mb-2" id="message"></textarea>
-        <input type="submit" value="Send" id="submit-btn" class="px-3 py-2 rounded my-3 email-btn">
-      </form>
-    </div>
+    <footer id="contact-me">
+      <div class="contact pt-5 pb-2 container text-center text-light">
+        <form class="flex-column">
+          <h2>Contact Me</h2>
+          <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
+          <input type="text" placeholder="Name" class="py-2 px-3" id="name">
+          <input type="email" placeholder="Email" class="py-2 px-3 my-3" id="email" required>
+          <textarea rows="4" placeholder="Hi Paul, i am ..." class="p-3 mb-2" id="message"></textarea>
+          <input type="submit" value="Send" id="submit-btn" class="px-3 py-2 rounded my-3 email-btn">
+        </form>
+
+        <div class="social-links mx-5 py-4 mb-3">
+          <a href="mailto: ajuzepaul@gmail.com">ajuzepaul@gmail.com</a>
+          <a href="https://www.linkedin.com/in/chukwuebuka-paul-ajuizeogu/" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/misterpaul4" class="mr-3"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/paulajuze"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <script src="./index.js"></script>
