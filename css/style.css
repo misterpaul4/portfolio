@@ -9,9 +9,9 @@
 	--color-light: #EBEBFF;
 }
 
-html {
+/* html {
 	scroll-behavior: smooth;
-}
+} */
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -108,6 +108,10 @@ h6 {
 	font-weight: bold;
 	font-family: 'Pacifico', cursive;
 	text-transform: capitalize;
+}
+
+li {
+	list-style: none;
 }
 
 .shape {
