@@ -176,7 +176,8 @@ h6 {
 /* projects */
 .featured > * {
 	flex: 1;
-	height: 300px;
+	height: 400px;
+	min-width: 250px;
 }
 
 .ft-1 {
@@ -189,8 +190,9 @@ h6 {
 
 .others > * {
 	flex: 1;
-	height: 200px;
+	height: 250px;
 	background-color: lightcoral;
+	min-width: 225px;
 }
 
 .oth-1 {
@@ -217,6 +219,9 @@ h6 {
 
 .projects .tags > * {
 	font-size: 0.8rem;
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: 2px;
 }
 
 .tags > * {
@@ -235,7 +240,7 @@ h6 {
 /* about */
 .talents {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -243,6 +248,12 @@ h6 {
 	flex: 1;
 	margin: 10px;
 	border-radius: 20px;
+	min-width: 250px;
+	max-width: 325px;
+}
+
+.about p {
+	max-width: 600px;
 }
 
 .about h4 {
@@ -267,6 +278,15 @@ h6 {
 }
 
 /* contact */
+.contact {
+	background-color: var(--color-blue);
+}
+
+.contact .email-btn {
+	background-color: white;
+	color: var(--color-blue);
+}
+
 form {
 	display: inline-flex;
 }
@@ -277,6 +297,10 @@ form > * {
 
 #submit-btn {
 	align-self: center;
+}
+
+.contact textarea {
+	width: 500px;
 }
 
 @keyframes move {
@@ -292,5 +316,9 @@ form > * {
 	nav .email-btn,
 	.nav-links {
 		display: none;
+	}
+
+	.contact textarea {
+		width: 300px;
 	}
  }
