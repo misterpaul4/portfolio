@@ -191,7 +191,6 @@ li {
 .others > * {
 	flex: 1;
 	height: 250px;
-	background-color: lightcoral;
 	min-width: 225px;
 }
 
