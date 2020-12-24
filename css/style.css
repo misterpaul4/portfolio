@@ -7,12 +7,11 @@
 	--color-blue: #8A3FFC;
 	--color-gray: #423b39;
 	--color-light: #EBEBFF;
-	--animate-duration: 2000ms;
 }
 
-/* html {
+html {
 	scroll-behavior: smooth;
-} */
+}
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -59,10 +58,6 @@ img {
 	align-items: center;
 }
 
-.reveal {
-	opacity: 1 !important;
-}
-
 /* nav */
 nav {
 	align-items: center;
@@ -94,9 +89,8 @@ nav {
 /* hero */
 .hero {
 	height: 100vh;
-	display: flex;
-	align-items: center;
 	position: relative;
+	overflow: hidden;
 }
 
 h1,
@@ -114,39 +108,32 @@ li {
 	list-style: none;
 }
 
-.shape {
-	position: absolute;
+.blob {
 	z-index: -1;
+	position: absolute;
 	fill: var(--color-light);
 }
 
+.sp-1 {
+	right: 0px;
+	bottom: 10px;
+	width: 24vmax;
+}
+
 .sp-2 {
-	right: 5%;
-	width: 70px;
-	bottom: 40px;
-}
-
-.sp-3 {
-	width: 70px;
-	left: 5%;
-	bottom: 20px;
-}
-
-.sp-4 {
-	width: 50px;
-	top: 70px;
-	left: 5%;
-}
-
-.sp-5 {
-	right: 5%;
-	width: 70px;
-	top: 60px;
+	left: 0px;
+	bottom: 0;
+	width: 22vmax;
 }
 
 .hero .message {
-	width: 700px;
-	position: relative;
+	max-width: 700px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .hero .message p {
@@ -164,7 +151,7 @@ li {
 
 /* projects */
 .projects {
-	background-color: var(--color-light);
+	background-color: #fbf9ff;
 }
 
 #my-projects:before {
@@ -178,6 +165,12 @@ li {
 	flex: 1;
 	height: 400px;
 	min-width: 250px;
+}
+
+.featured > *,
+.others > *,
+.project-details {
+	border-radius: 10px;
 }
 
 .ft-1 {
@@ -212,8 +205,13 @@ li {
 	background: #000000;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, rgba(67, 67, 67, 0.7), rgba(0, 0, 0, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, rgba(67, 67, 67, 0.7), rgba(0, 0, 0, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	opacity: 0.15;
-  transition: opacity 0.5s;
+	opacity: 0.1;
+	transition: opacity 0.3s;
+}
+
+.project-details:hover,
+.project-details:active {
+	opacity: 1;
 }
 
 .projects .tags > * {
@@ -317,9 +315,25 @@ form > * {
 	font-size: 1.3rem;
 }
 
+@media (max-width: 768px) {
+	.hero .message p {
+		font-size: 1rem;
+	}
+}
+
 @media (max-width: 576px) {
 	nav .email-btn,
 	.nav-links {
 		display: none;
+	}
+
+
+	.hero .message p {
+		font-size: 0.9rem;
+	}
+
+	h1,
+	h2 {
+		font-size: 1.5rem;
 	}
  }
