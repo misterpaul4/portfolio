@@ -52,7 +52,7 @@
 
   <main>
     <div class="hero">
-      <div class="message container">
+      <div class="message container centered">
         <h1 class="mb-4">Hi, I'm Paul <br>Great to have you here</h1>
         <p>I'm a software developer, one that makes cool & interesting stuff that might interest you. I love the process of turning ideas into reality using creative solutions. If you've got a project in mind & you're in need of a deveoper, well, look no further cuz you found one. Scroll down to see some of my work!</p>
         <div class="social-links">
@@ -268,13 +268,14 @@
 
     <footer id="contact-me">
       <div class="contact pt-5 pb-2 container text-center text-light">
-        <form class="flex-column" action="https://formspree.io/f/xdoppzgd" method="POST">
+        <form class="flex-column" id="contact-form">
           <h2>Contact Me</h2>
           <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
-          <input type="text" placeholder="Name" name="name" class="py-2 px-3" id="name">
+          <input type="text" placeholder="Name" name="name" class="py-2 px-3" id="name" required>
           <input type="email" placeholder="Email" name="email" class="py-2 px-3 my-3" id="email" required>
           <textarea rows="4" placeholder="Hi Paul, i am ..." class="p-3 mb-2" id="message" name="message"></textarea>
-          <a href="https://misterpaul4.github.io/portfolio/"><input type="submit" value="Send" id="submit-btn" class="px-3 py-2 rounded my-3 email-btn"></a>
+
+          <input type="submit" value="Send" id="submit-btn" class="px-3 py-2 rounded my-3 email-btn">
         </form>
 
         <div class="social-links py-4 mb-3">
@@ -284,7 +285,7 @@
           <a href="https://twitter.com/paulajuze"><i class="fab fa-twitter"></i></a>
         </div>
 
-        <span> © Copyright <strong>Paul Ajuizeogu</strong> 2020. </span>
+        <span> © Copyright <strong>Paul AjuZE</strong> 2020. </span>
       </div>
     </footer>
   </main>
