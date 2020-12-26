@@ -10,6 +10,11 @@ mobileLinks.forEach(element => {
 
 const formParentContainer = document.querySelector('.contact');
 const form = document.getElementById('contact-form');
+const emailTooltip = document.querySelector('.tooltp-email');
+const nameTooltip = document.querySelector('.tooltp-name');
+let formUserName;
+let formUserEmail;
+
 const spinner = document.querySelector('.loading');
 
 const formSuccess = {
@@ -26,6 +31,43 @@ const formFail = {
   actionText: 'retry',
 }
 
+const clearToolTips = () => {
+  // reset tooltips
+  emailTooltip.textContent = '';
+  emailTooltip.classList.add('d-none');
+  nameTooltip.textContent = '';
+  nameTooltip.classList.add('d-none');
+};
+
+const validate = (email, nm) => {
+  clearToolTips();
+  const validateEmail = () => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!re.test(String(email).toLowerCase())) {
+      emailTooltip.textContent = '*enter valid email address';
+      emailTooltip.classList.remove('d-none');
+      return false;
+    };
+
+    return true
+  };
+
+  const validateName = () => {
+    const re = /^[a-zA-Z,. \-]{2,40}$/;
+    if(!re.test(nm)) {
+      nameTooltip.textContent = '*must be 2-40 characters & only (.,-) symbols allowed'
+      nameTooltip.classList.remove('d-none');
+      return false;
+    };
+
+    return true;
+  };
+
+  const emailisValid = validateEmail();
+  const nameisValid = validateName();
+  if(emailisValid && nameisValid) { return true };
+  return false;
+};
 
 const buildStatus = (status) => {
   const footer = document.getElementById('contact-me');
@@ -89,7 +131,12 @@ const submitBtn = document.getElementById('submit-btn');
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  formParentContainer.classList.add('blur');
-  spinner.classList.remove('d-none');
-  setTimeout(submitForm, 4000);
+  formUserName = document.getElementById('name').value;
+  formUserEmail = document.getElementById('email').value;
+
+  if (validate(formUserEmail, formUserName)) {
+    formParentContainer.classList.add('blur');
+    spinner.classList.remove('d-none');
+    setTimeout(submitForm, 4000);;
+  };
 });

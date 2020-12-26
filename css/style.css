@@ -371,6 +371,22 @@ textarea::-webkit-scrollbar {
 	color: var(--color-blue);
 }
 
+.tooltp {
+	align-self: flex-start;
+	margin-left: 1rem;
+	font-size: 0.8rem;
+	font-style: italic;
+	text-align: left;
+}
+
+.tooltp-name {
+	margin-bottom: -1rem;
+}
+
+.tooltp-email {
+	margin-top: -1rem;
+}
+
 @media (max-width: 768px) {
 	.hero .message p {
 		font-size: 1rem;
