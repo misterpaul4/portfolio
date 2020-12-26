@@ -100,8 +100,6 @@ const buildStatus = (status) => {
 };
 
 const submitForm = () => {
-  spinner.classList.add('d-none');
-
   const XHR = new XMLHttpRequest();
   const FD = new FormData(form);
 
@@ -116,12 +114,14 @@ const submitForm = () => {
 
   // succesful
   XHR.addEventListener('load', () => {
+    spinner.classList.add('d-none');
     buildStatus(formSuccess);
     form.reset();
   });
 
   // unsuccesful
   XHR.addEventListener('error', () => {
+    spinner.classList.add('d-none');
     buildStatus(formFail);
   });
 
@@ -141,6 +141,6 @@ submitBtn.addEventListener('click', (e) => {
     spinner.classList.remove('d-none');
     contactContainer.classList.add('unclickable');
 
-    setTimeout(submitForm, 4000);
+    setTimeout(submitForm, 2000);
   }
 });
