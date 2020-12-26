@@ -8,65 +8,80 @@ mobileLinks.forEach(element => {
   });
 });
 
-
+const formParentContainer = document.querySelector('.contact');
 const form = document.getElementById('contact-form');
-const userName = document.getElementById('name');
+const spinner = document.querySelector('.loading');
 
 const formSuccess = {
-  messageHeader: 'Thank you Anna',
+  messageHeader: (userName) => `Thanks ${userName}`,
   message: 'Your message has been sent. I will reach out to you as soon as possible.',
   icon: 'checked.svg',
   actionText: 'close',
 };
 
 const formFail = {
-  messageHeader: 'Whoops!',
+  messageHeader: (userName) => `Whoops! Sorry ${userName}`,
   message: "Something went wrong. Let's give this another try",
   icon: 'retry.svg',
   actionText: 'retry',
 }
 
+
 const buildStatus = (status) => {
-  const formParentContainer = document.querySelector('.contact');
   const footer = document.getElementById('contact-me');
-  formParentContainer.classList.add('blur');
 
   const container = document.createElement('div');
+  const actionBtn = document.createElement('button');
+
   container.classList.add('form-status', 'container', 'centered');
+  actionBtn.classList.add('close-btn');
 
   container.innerHTML = `
   <img src="./img/${status.icon}" alt="check icon" class="check-icon"/>
   <div class="message">
-    <h1>${status.messageHeader}</h1>
+    <h1>${status.messageHeader(document.getElementById('name').value)}</h1>
     <p>${status.message}</p>
   </div>
-  <button class="close-btn">${status.actionText}</button>
   `
-  footer.appendChild(container);
-}
 
-buildStatus(formSuccess);
+  actionBtn.textContent = status.actionText;
+
+  container.appendChild(actionBtn);
+  footer.appendChild(container);
+
+  actionBtn.addEventListener('click', () => {
+    footer.removeChild(container);
+    formParentContainer.classList.remove('blur');
+  });
+};
 
 const submitForm = () => {
+  spinner.classList.add('d-none');
+
   const XHR = new XMLHttpRequest();
   const FD = new FormData(form);
 
+  const send = () => {
+    // set up request
+    XHR.open('POST', 'https://formspree.io/f/xdoppzgd');
+    XHR.setRequestHeader("Accept", "application/json");
+
+    // send data
+    XHR.send(FD);
+  };
+
   // succesful
   XHR.addEventListener('load', (e) => {
-    alert(e.target.responseText);
+    buildStatus(formSuccess);
+    form.reset();
   });
 
   // unsuccesful
   XHR.addEventListener('error', (e) => {
-    alert('Oops! Something went wrong.');
+    buildStatus(formFail);
   });
 
-  // set up request
-  XHR.open('POST', 'https://formspree.io/f/xdoppzgd');
-  XHR.setRequestHeader("Accept", "application/json");
-
-  // send data
-  XHR.send(FD);
+  send();
 };
 
 // redirect message when contact form is submitted
@@ -74,5 +89,7 @@ const submitBtn = document.getElementById('submit-btn');
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  submitForm();
+  formParentContainer.classList.add('blur');
+  spinner.classList.remove('d-none');
+  setTimeout(submitForm, 4000);
 });

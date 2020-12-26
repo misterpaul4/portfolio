@@ -359,6 +359,18 @@ textarea::-webkit-scrollbar {
 	padding: 5px 10px;
 }
 
+.loading {
+	background-color: white;
+	border: 3px solid #f1f1f1;
+	padding: 3em;
+}
+
+.loading > * {
+	height: 10rem;
+	width: 10rem;
+	color: var(--color-blue);
+}
+
 @media (max-width: 768px) {
 	.hero .message p {
 		font-size: 1rem;
