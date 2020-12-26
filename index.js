@@ -4,10 +4,11 @@ const mobileLinks = document.querySelectorAll('.mobile-links > *');
 mobileLinks.forEach(element => {
   element.addEventListener('click', () => {
     // trigger close menu button for mobile
-    document.getElementById("menu-checkbox").click();
+    document.getElementById('menu-checkbox').click();
   });
 });
 
+const contactContainer = document.querySelector('.contact');
 const formParentContainer = document.querySelector('.contact');
 const form = document.getElementById('contact-form');
 const emailTooltip = document.querySelector('.tooltp-email');
@@ -29,7 +30,7 @@ const formFail = {
   message: "Something went wrong. Let's give this another try",
   icon: 'retry.svg',
   actionText: 'retry',
-}
+};
 
 const clearToolTips = () => {
   // reset tooltips
@@ -43,29 +44,29 @@ const validate = (email, nm) => {
   clearToolTips();
   const validateEmail = () => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!re.test(String(email).toLowerCase())) {
+    if (!re.test(String(email).toLowerCase())) {
       emailTooltip.textContent = '*enter valid email address';
       emailTooltip.classList.remove('d-none');
       return false;
-    };
+    }
 
-    return true
+    return true;
   };
 
   const validateName = () => {
-    const re = /^[a-zA-Z,. \-]{2,40}$/;
-    if(!re.test(nm)) {
-      nameTooltip.textContent = '*must be 2-40 characters & only (.,-) symbols allowed'
+    const re = /^[a-zA-Z,. -]{2,40}$/;
+    if (!re.test(nm)) {
+      nameTooltip.textContent = '*must be 2-40 characters & only (.,-) symbols allowed';
       nameTooltip.classList.remove('d-none');
       return false;
-    };
+    }
 
     return true;
   };
 
   const emailisValid = validateEmail();
   const nameisValid = validateName();
-  if(emailisValid && nameisValid) { return true };
+  if (emailisValid && nameisValid) { return true; }
   return false;
 };
 
@@ -84,7 +85,7 @@ const buildStatus = (status) => {
     <h1>${status.messageHeader(document.getElementById('name').value)}</h1>
     <p>${status.message}</p>
   </div>
-  `
+  `;
 
   actionBtn.textContent = status.actionText;
 
@@ -94,6 +95,7 @@ const buildStatus = (status) => {
   actionBtn.addEventListener('click', () => {
     footer.removeChild(container);
     formParentContainer.classList.remove('blur');
+    contactContainer.classList.remove('unclickable');
   });
 };
 
@@ -105,21 +107,21 @@ const submitForm = () => {
 
   const send = () => {
     // set up request
-    XHR.open('POST', 'https://formspree.io/f/xdoppzgd');
-    XHR.setRequestHeader("Accept", "application/json");
+    XHR.open('POST', 'https://formspree.io/f/xnqoozry');
+    XHR.setRequestHeader('Accept', 'application/json');
 
     // send data
     XHR.send(FD);
   };
 
   // succesful
-  XHR.addEventListener('load', (e) => {
+  XHR.addEventListener('load', () => {
     buildStatus(formSuccess);
     form.reset();
   });
 
   // unsuccesful
-  XHR.addEventListener('error', (e) => {
+  XHR.addEventListener('error', () => {
     buildStatus(formFail);
   });
 
@@ -137,6 +139,8 @@ submitBtn.addEventListener('click', (e) => {
   if (validate(formUserEmail, formUserName)) {
     formParentContainer.classList.add('blur');
     spinner.classList.remove('d-none');
-    setTimeout(submitForm, 4000);;
-  };
+    contactContainer.classList.add('unclickable');
+
+    setTimeout(submitForm, 4000);
+  }
 });

@@ -66,13 +66,17 @@ img {
 	transform: translate(-50%, -50%);
 }
 
+.unclickable {
+	pointer-events: none
+}
+
 /* nav */
 nav {
 	align-items: center;
 	position: fixed;
 	width: 100%;
-	background-color: white;
-	z-index: 2;
+	background-color: rgba(255, 255, 255, 0.95);
+	z-index: 10;
 	box-shadow: -0.3rem -0.3rem 0.7rem #ecebeb, 0.3rem 0.3rem 0.5rem rgba(231, 228, 227, 0.568);
 }
 
@@ -117,7 +121,7 @@ li {
 }
 
 .blob {
-	z-index: -1;
+	z-index: 1;
 	position: absolute;
 	fill: var(--color-light);
 }
@@ -136,7 +140,8 @@ li {
 
 .hero .message {
 	max-width: 700px;
-  margin: 0;
+	margin: 0;
+	z-index: 2;
 }
 
 .hero .message p {
@@ -321,7 +326,8 @@ form > * {
 
 textarea {
 	-ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;
+	scrollbar-width: none;
+	z-index: 2;
 }
 
 textarea::-webkit-scrollbar {
@@ -338,6 +344,7 @@ textarea::-webkit-scrollbar {
   border: 3px solid #f1f1f1;
   padding: 20px;
 	text-align: center;
+	z-index: 5;
 }
 
 .form-status .check-icon {
@@ -385,6 +392,15 @@ textarea::-webkit-scrollbar {
 
 .tooltp-email {
 	margin-top: -1rem;
+}
+
+footer .blob {
+	bottom: 16%;
+	width: 15vmax;
+}
+
+footer .sp-1 {
+	bottom: 17%;
 }
 
 @media (max-width: 768px) {
