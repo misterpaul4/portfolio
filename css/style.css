@@ -426,4 +426,9 @@ footer .sp-1 {
   h2 {
     font-size: 1.5rem;
   }
+
+  .logo {
+    width: 70px;
+    height: 20px;
+  }
 }

@@ -19,7 +19,7 @@ let formUserEmail;
 const spinner = document.querySelector('.loading');
 
 const formSuccess = {
-  messageHeader: (userName) => `Thanks ${userName}`,
+  messageHeader: (userName) => `Thank You ${userName}`,
   message: 'Your message has been sent. I will reach out to you as soon as possible.',
   icon: 'checked.svg',
   actionText: 'close',
