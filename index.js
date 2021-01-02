@@ -141,6 +141,6 @@ submitBtn.addEventListener('click', (e) => {
     spinner.classList.remove('d-none');
     contactContainer.classList.add('unclickable');
 
-    setTimeout(submitForm, 2000);
+    setTimeout(submitForm, 1000);
   }
 });

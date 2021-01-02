@@ -4,7 +4,7 @@
 /* global */
 :root {
   --color-blue: #8a3ffc;
-  --color-gray: #423b39;
+  --color-gray: #4e4542;
   --color-light: #ebebff;
 }
 
@@ -237,6 +237,8 @@ form > * {
 .tags > * {
   background-color: var(--color-gray);
   color: white;
+  border-radius: 20px;
+  border: 1px solid whitesmoke;
 }
 
 .talents > * {
@@ -297,7 +299,6 @@ form > * {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 5px;
-  border-radius: 20px;
 }
 
 /* contact */
@@ -333,6 +334,12 @@ textarea {
   scrollbar-width: none;
   z-index: 2;
 }
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 
 textarea::-webkit-scrollbar {
   display: none;
