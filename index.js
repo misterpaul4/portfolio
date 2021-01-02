@@ -80,7 +80,7 @@ const buildStatus = (status) => {
   actionBtn.classList.add('close-btn');
 
   container.innerHTML = `
-  <img src="./img/${status.icon}" alt="check icon" class="check-icon"/>
+  <img src="./img/${status.icon}" class="check-icon"/>
   <div class="message">
     <h1>${status.messageHeader(document.getElementById('name').value)}</h1>
     <p>${status.message}</p>
