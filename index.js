@@ -1,7 +1,7 @@
 // click event for items in hamburger menu
 const mobileLinks = document.querySelectorAll('.mobile-links > *');
 
-mobileLinks.forEach(element => {
+mobileLinks.forEach((element) => {
   element.addEventListener('click', () => {
     // trigger close menu button for mobile
     document.getElementById('menu-checkbox').click();
@@ -20,7 +20,8 @@ const spinner = document.querySelector('.loading');
 
 const formSuccess = {
   messageHeader: (userName) => `Thank You ${userName}`,
-  message: 'Your message has been sent. I will reach out to you as soon as possible.',
+  message:
+    'Your message has been sent. I will reach out to you as soon as possible.',
   icon: 'checked.svg',
   actionText: 'close',
 };
@@ -66,7 +67,9 @@ const validate = (email, nm) => {
 
   const emailisValid = validateEmail();
   const nameisValid = validateName();
-  if (emailisValid && nameisValid) { return true; }
+  if (emailisValid && nameisValid) {
+    return true;
+  }
   return false;
 };
 
@@ -144,3 +147,6 @@ submitBtn.addEventListener('click', (e) => {
     setTimeout(submitForm, 1000);
   }
 });
+
+const yearEle = document.getElementById('copywrite-year');
+yearEle.textContent = new Date().getFullYear();
