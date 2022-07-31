@@ -1,5 +1,5 @@
 # portfolio
->This is my portfolio site where i showcase some of my best work. I aimed for simplicity and user experience for this site.
+>This is my portfolio site where i showcase some of my work. I aimed for simplicity for this site.
 
 ## live link
 you can view the site [here](https://misterpaul4.github.io/portfolio/)
