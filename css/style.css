@@ -233,8 +233,6 @@ form > * {
   align-items: flex-start;
   background: #000;
   background: linear-gradient(to left, rgba(67, 67, 67, 0.7), rgba(0, 0, 0, 0.8));
-  opacity: 0.1;
-  transition: opacity 0.4s;
 }
 
 .project-details:hover,
